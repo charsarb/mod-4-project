@@ -14,26 +14,29 @@ This project data from CrowdFlower. The data consists of tweets about Apple and 
 
 ## Methods
 
-The data were analyzed recurrent neural networks. Multiple LSTM models with different parameters were used to develop a network better than chance at classifying tweets. In addition exploratory data analysis provided insights about the data.    
+The data were analyzed using multinomial Bayes, logistic regession, random forest, and recurrent neural network models. Multiple simple and LSTM models with different parameters were used to develop a network better than chance at classifying tweets. In addition exploratory data analysis provided insights about the data.    
 
 ## Results
 
 The random forest model with modified hyperparameters provided the best balance of metrics and was 88% accurate.  
 
 ![wordcloudpos](Images/wordcloudpos.jpg)
-The wordcloud for the positive tweets indicated that as expected positive words like 'awesome' were fairly prominent. The product names also featured heavily. 
+The wordcloud for the positive tweets indicated that as expected positive words like 'awesome' were fairly prominent. In addition, words related to novelty and purchase appear common.
 
 ![wordcloudneg](Images/wordcloudneg.jpg)
-Some of the brand names seemed larger in this wordcloud but further analysis did not bear this out. 
+There are also a lot of words related to purchase and novelty. The modal verbs also appear more common in the negative tweets.
 
 ![top25](Images/top25.jpg)
-The ipad is the most discussed product both positively and negatively. Contrary to the appearance in the wordcloud, Apple is mentioned more in positive tweets while Google is more mentioned in the negative tweets. While great is in the top 25 positive words, headaches is more prominent in the negative words. Many of the positive words seems to indicate being exposed to new content (i.e. 'popup'). While some of those words appear in the negative tweets, they appear less frequently. The iphone is mentioned more in negative tweets. Interestingly, need only appears as a top word for negative tweets. Overall the words are fairly similar.
+While great is in the top 25 positive words, headaches is more prominent in the negative words. Many of the positive words seems to indicate being exposed to new content (i.e. 'popup'). While some of those words appear in the negative tweets, they appear less frequently. The iphone is mentioned more in negative tweets. Interestingly, need only appears as a top word for negative tweets. Overall the words are fairly similar.
 
-![model](Images/model.jpg)
-While the model did not perform idealy, this model had approximately 80% accuracy, though not stably. 
+![logregconfusionmatrix](Images/model.jpg)
+This model did better than chance at classifying tweets as positive or negative. It was 82% accurate.
+
+![nnconfusionmatrix](Images/model.jpg)
+This model had approximately 75% accuracy, though not stably. It was also better than chance at determining whether tweets were positive or negative. 
 
 ## Recomendations
-Having some kind of event around new products is related to positive tweets, so this is something companies should take into account if they want to see positive tweets about their product. Looking for words that are talking about taking an action may help to identify a negative tweet. Lastly, one of the best indications of a postive tweet is in fact positive words. While this seems obvious, it shows that people are often explicit about their opinions.
+A more complex model is not always better so using a logistic regression model is a good strategy for classifying tweets by emotion. This model is also more consistent, requires fewer resources, and performs more quickly. Having some kind of event around new products is related to positive tweets, so this is something companies should take into account if they want to see positive tweets about their product. Looking for words that are talking about taking an action may help to identify a negative tweet. Lastly, one of the best indications of a postive tweet is in fact positive words. While this seems obvious, it shows that people are often explicit about their opinions.
 
 
 
