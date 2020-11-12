@@ -18,21 +18,19 @@ The data were analyzed using multinomial Bayes, logistic regession, random fores
 
 ## Results
 
-The random forest model with modified hyperparameters provided the best balance of metrics and was 88% accurate.  
-
-![wordcloudpos](Images/wordcloudpos.jpg)
+<img src="https://raw.githubusercontent.com/charsarb/mod-4-project/master/images/wordcloudpos.jpg">
 The wordcloud for the positive tweets indicated that as expected positive words like 'awesome' were fairly prominent. In addition, words related to novelty and purchase appear common.
 
-![wordcloudneg](Images/wordcloudneg.jpg)
+<img src="https://raw.githubusercontent.com/charsarb/mod-4-project/master/images/wordcloudneg.jpg">
 There are also a lot of words related to purchase and novelty. The modal verbs also appear more common in the negative tweets.
 
-![top25](Images/top25.jpg)
+<img src="https://raw.githubusercontent.com/charsarb/mod-4-project/master/images/top25.jpg">
 While great is in the top 25 positive words, headaches is more prominent in the negative words. Many of the positive words seems to indicate being exposed to new content (i.e. 'popup'). While some of those words appear in the negative tweets, they appear less frequently. The iphone is mentioned more in negative tweets. Interestingly, need only appears as a top word for negative tweets. Overall the words are fairly similar.
 
-![logregconfusionmatrix](Images/model.jpg)
+<img src="https://raw.githubusercontent.com/charsarb/mod-4-project/master/images/logregconfusionmatrix.jpg">
 This model did better than chance at classifying tweets as positive or negative. It was 82% accurate.
 
-![nnconfusionmatrix](Images/model.jpg)
+<img src="https://raw.githubusercontent.com/charsarb/mod-4-project/master/images/nnconfusionmatrix.jpg">
 This model had approximately 75% accuracy, though not stably. It was also better than chance at determining whether tweets were positive or negative. 
 
 ## Recomendations
